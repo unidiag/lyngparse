@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func lyngsat(path string) []string {
+func LyngSat(path string) []string {
 
 	url := "https://www.lyngsat.com" + path
 	var cfg []string
