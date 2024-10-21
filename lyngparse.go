@@ -33,7 +33,7 @@ func LyngSat(path string) []string {
 	}
 	html := strings.ReplaceAll(string(body), "\n", "")
 
-	freqPolarityRegex := regexp.MustCompile(`<a[^>]*>(\d+)&nbsp;([HV])</a>.*?DVB-(S|S2)(?:<br>\S+)?<br>(\d+)<br>`)
+	freqPolarityRegex := regexp.MustCompile(`<a[^>]*>(\d+)&nbsp;([HVRL])</a>.*?DVB-(S|S2)(?:<br>\S+)?<br>(\d+)<br>`)
 	matches := freqPolarityRegex.FindAllStringSubmatch(html, -1)
 
 	for _, match := range matches {
